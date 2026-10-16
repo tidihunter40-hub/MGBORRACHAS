@@ -1,8 +1,12 @@
 .env
 .env.*
 !.env.example
+.npm-cache/
+.vercel-tools/
+node_modules/
 material-original/
 qa-*.png
+preview-site-referencia.png
 RELATORIO.md
 RELATORIO_FOTOS_MG007_MG015.md
 README.md
