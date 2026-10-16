@@ -40,7 +40,7 @@ for (const path of productLinks) {
       throw new Error(`${path}: imagem indisponível (HTTP ${response.status}).`);
     }
     photos++;
-  } else if (!detail.includes('Imagem em breve')) {
+  } else if (!detail.includes('Fotografia ainda não disponível')) {
     throw new Error(`${path}: faltam imagem e marcador de foto pendente.`);
   }
 }

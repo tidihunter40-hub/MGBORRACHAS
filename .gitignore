@@ -9,5 +9,7 @@ node_modules/
 .DS_Store
 *.log
 material-original/
+MG_BORRACHAS_FOTOS_CODEX/
+photo-reference-preview/
 qa-*.png
 preview-site-referencia.png
