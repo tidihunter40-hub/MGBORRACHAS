@@ -1,12 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { access } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
+import source from '../lib/catalog-data.mjs';
 import { localProducts, localCategories, defaultSettings, normalize } from '../lib/catalog.mjs';
 import { home, catalog, productPage, quotePage, customPage, simplePage, esc } from '../lib/views.mjs';
 import { buildCustomQuoteMessage } from '../public/custom-page.js';
 import { loginPage, adminPage } from '../lib/admin-views.mjs';
 
 const data = { products: localProducts, categories: localCategories, settings: defaultSettings, preview: true };
+
+test('o catálogo empacotado corresponde ao JSON original', async () => {
+  const original = JSON.parse(await readFile(new URL('../data/catalogo-original.json', import.meta.url), 'utf8'));
+  assert.deepEqual(source, original);
+});
 
 test('o catálogo preserva os 15 SKUs reais e as seis fotografias correspondentes', async () => {
   assert.equal(localProducts.length, 15);

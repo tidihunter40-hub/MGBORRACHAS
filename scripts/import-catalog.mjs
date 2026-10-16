@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { localProducts, slugify } from '../lib/catalog.mjs';
+import source from '../lib/catalog-data.mjs';
 import { supabase, configured } from '../lib/supabase.mjs';
 
 if (!configured || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
@@ -10,7 +11,6 @@ if (!configured || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
 }
 
 const root = path.dirname(fileURLToPath(import.meta.url));
-const source = JSON.parse(await readFile(new URL('../data/catalogo-original.json', import.meta.url), 'utf8'));
 let categories = await supabase('/rest/v1/categories?select=id,name,slug', { service: true });
 let products = await supabase('/rest/v1/products?select=id,sku', { service: true });
 
