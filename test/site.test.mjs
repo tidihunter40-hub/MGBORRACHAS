@@ -14,24 +14,30 @@ test('o catálogo empacotado corresponde ao JSON original', async () => {
   assert.deepEqual(source, original);
 });
 
-test('o catálogo preserva os 15 SKUs reais e associa a nova foto somente ao MG007', async () => {
+test('o catálogo preserva os 15 SKUs reais e associa somente as fotos fornecidas', async () => {
   assert.equal(localProducts.length, 15);
   assert.deepEqual(localProducts.map(p => p.sku), Array.from({ length: 15 }, (_, i) => `MG${String(i + 1).padStart(3, '0')}`));
-  assert.equal(localProducts.filter(p => p.image).length, 7);
+  assert.equal(localProducts.filter(p => p.image).length, 8);
   assert.equal(localProducts.find(p => p.sku === 'MG007').image, '/assets/products/mg007-roldanas-de-borracha.webp');
-  assert.ok(localProducts.slice(7).every(p => !p.image));
+  assert.equal(localProducts.find(p => p.sku === 'MG015').image, '/assets/products/mg015-revestimentos-de-borracha.webp');
+  assert.ok(localProducts.slice(7, 14).every(p => !p.image));
   assert.equal(new Set(localProducts.map(p => p.slug)).size, 15);
   for (const product of localProducts.filter(p => p.image)) await access(new URL(`../public${product.image}`, import.meta.url));
 });
 
-test('a foto enviada aparece no catálogo publicado sem substituir uma foto cadastrada no banco', () => {
-  const base = { id: 'product-7', sku: 'MG007', name: 'Roldanas de borracha', slug: 'roldanas-de-borracha', product_images: [] };
-  const fallback = normalizeDbProduct(base);
-  assert.equal(fallback.image, '/assets/products/mg007-roldanas-de-borracha.webp');
-  assert.deepEqual(fallback.images, [fallback.image]);
-  const dbImage = normalizeDbProduct({ ...base, product_images: [{ id: 'image-7', is_primary: true, sort_order: 0 }] });
-  assert.equal(dbImage.image, '/media/image-7');
-  assert.deepEqual(dbImage.images, ['/media/image-7']);
+test('as fotos fornecidas aparecem no catálogo publicado sem substituir fotos cadastradas no banco', () => {
+  for (const [sku, slug, photo] of [
+    ['MG007', 'roldanas-de-borracha', '/assets/products/mg007-roldanas-de-borracha.webp'],
+    ['MG015', 'revestimentos-de-borracha', '/assets/products/mg015-revestimentos-de-borracha.webp']
+  ]) {
+    const base = { id: `product-${sku}`, sku, name: slug, slug, product_images: [] };
+    const fallback = normalizeDbProduct(base);
+    assert.equal(fallback.image, photo);
+    assert.deepEqual(fallback.images, [photo]);
+    const dbImage = normalizeDbProduct({ ...base, product_images: [{ id: `image-${sku}`, is_primary: true, sort_order: 0 }] });
+    assert.equal(dbImage.image, `/media/image-${sku}`);
+    assert.deepEqual(dbImage.images, [`/media/image-${sku}`]);
+  }
 });
 
 test('a busca pode tratar diferenças de acento', () => {
