@@ -1,0 +1,13 @@
+.env
+.env.local
+.env.*
+!.env.example
+.vercel/
+.vercel-tools/
+.npm-cache/
+node_modules/
+.DS_Store
+*.log
+material-original/
+qa-*.png
+preview-site-referencia.png

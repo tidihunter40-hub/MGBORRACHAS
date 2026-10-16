@@ -1,0 +1,160 @@
+.quote-hero{position:relative;isolation:isolate;min-height:280px;overflow:hidden;background:#0b0e12;color:#fff}
+.quote-hero__image,.quote-hero__shade,.quote-hero__diagonal{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.quote-hero__image{z-index:-3;object-fit:cover;object-position:center 43%}
+.quote-hero__shade{z-index:-2;background:linear-gradient(90deg,#0b0e12 0%,#0b0e12f5 31%,#0b0e12c9 48%,#0b0e1238 76%,#0b0e120a 100%)}
+.quote-hero__diagonal{z-index:-1;left:52%;width:24%;height:100%;transform:skewX(-34deg);transform-origin:bottom left;border-left:16px solid #ffcc00aa;border-right:8px solid #ffcc004d;opacity:.8}
+.quote-hero__inner{position:relative;min-height:280px;padding-top:17px;padding-bottom:26px;display:flex;flex-direction:column}
+.quote-breadcrumb{display:flex;align-items:center;gap:11px;color:#e2e5e8;font-size:.77rem}
+.quote-breadcrumb a:hover{text-decoration:underline}
+.quote-breadcrumb span[aria-hidden]{color:#989fa8}
+.quote-hero__copy{margin-top:auto;max-width:760px}
+.quote-hero__eyebrow{display:block;margin-bottom:8px;color:#ffcc00;font-size:.72rem;font-weight:900;letter-spacing:.25em}
+.quote-hero h1{margin:0 0 12px;font-family:Impact,'Arial Black',Arial,sans-serif;font-size:clamp(3rem,5.2vw,4.65rem);font-weight:900;line-height:.97;letter-spacing:.005em;text-transform:uppercase}
+.quote-hero h1 span{color:#ffcc00}
+.quote-hero p{max-width:620px;margin:0;color:#e7e9eb;font-size:1.04rem;line-height:1.5}
+.quote-main{background:#f5f6f8}
+.quote-main .container{width:min(1360px,calc(100% - 64px))}
+.quote-main .quote-layout{display:grid;grid-template-columns:minmax(0,7fr) minmax(310px,3fr);align-items:start;gap:24px;padding-top:32px;padding-bottom:58px}
+.quote-left{min-width:0}
+.quote-empty{position:relative;isolation:isolate;min-height:336px;padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;border:1px dashed #c9cfd6;border-radius:10px;background:#fff;text-align:center}
+.quote-empty::before,.quote-empty::after{content:"";position:absolute;z-index:-1;bottom:-52px;width:90px;height:180px;background:linear-gradient(90deg,#ffcc002c,#ffcc0005);transform:rotate(-36deg)}
+.quote-empty::before{left:9px}.quote-empty::after{right:9px;transform:rotate(36deg)}
+.quote-empty__icon{position:relative;width:104px;height:104px;margin-bottom:12px;display:grid;place-items:center;border-radius:50%;background:#f2f3f4;color:#15191f}
+.quote-empty__icon svg{width:62px;height:62px;stroke-width:1.5}
+.quote-empty__icon span{position:absolute;right:1px;bottom:11px;width:35px;height:35px;display:grid;place-items:center;border-radius:50%;background:#ffcc00;color:#0b0e12;font-size:1.7rem;font-weight:900}
+.quote-empty h2{margin:2px 0 6px;font-size:1.72rem;line-height:1.15}
+.quote-empty p{margin:0 0 21px;color:#6b7280;font-size:.95rem;line-height:1.45}
+.quote-empty .btn{min-width:275px;min-height:54px;gap:15px}
+.quote-empty .btn svg{width:23px;height:23px}
+.quote-empty .btn .quote-arrow{margin-left:auto;font-size:1.2rem}
+.quote-summary{position:sticky;top:94px;margin:0;padding:25px 24px 22px;border:1px solid #262d33;border-radius:10px;background:linear-gradient(145deg,#171c21,#101419);color:#fff;box-shadow:0 15px 35px #1112}
+.quote-summary__top{display:flex;justify-content:space-between;align-items:start}
+.quote-summary__top .eyebrow{color:#ffcc00;font-size:.72rem;letter-spacing:.22em}
+.quote-summary__top svg{width:36px;height:36px;color:#8e969e}
+.quote-summary h2{margin:2px 0 9px;font-size:1.47rem;line-height:1.15}
+.quote-summary p{margin:0;color:#c4cbd1;font-size:.91rem;line-height:1.43}
+.quote-total{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px;padding:14px 0 15px;border-top:1px solid #4b535b}
+.quote-total span{display:inline-flex;align-items:center;gap:9px;font-size:.85rem}
+.quote-total svg{width:19px;height:19px}
+.quote-total strong{font-size:1rem}
+.quote-summary__actions{display:grid;gap:10px}
+.quote-summary .btn{min-height:53px;gap:8px;padding:9px 10px;font-size:.79rem;line-height:1.2}
+.quote-summary .btn>span:last-child{margin-left:auto;font-size:1.15rem}
+.quote-wa-glyph{display:block;width:23px;height:23px;flex:none;background:currentColor;-webkit-mask:url('/assets/icons/whatsapp.svg') center/contain no-repeat;mask:url('/assets/icons/whatsapp.svg') center/contain no-repeat}
+.quote-summary .btn:disabled{background:#acb0b3;color:#434a50;border-color:#acb0b3;cursor:not-allowed;transform:none}
+.quote-clear{min-height:49px;display:flex;align-items:center;justify-content:center;gap:9px;border:1px solid #aab2ba;border-radius:6px;background:transparent;color:#fff;font-size:.76rem;font-weight:900;letter-spacing:.02em;transition:background .2s,border-color .2s}
+.quote-clear svg{width:18px;height:18px}
+.quote-clear:hover:not(:disabled){background:#ffffff12;border-color:#ffcc00}
+.quote-clear:disabled{opacity:.43;cursor:not-allowed}
+.quote-continue{display:inline-block;margin-top:20px;padding-bottom:5px;border-bottom:2px solid #ffcc00;color:#fff;font-size:.74rem;font-weight:900;letter-spacing:.02em}
+.quote-continue:hover{color:#ffcc00}
+.quote-benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:27px}
+.quote-benefit{min-width:0;display:flex;align-items:center;gap:11px;padding:7px 13px;border-right:1px solid #d7dce1}
+.quote-benefit:first-child{padding-left:0}
+.quote-benefit:last-child{border-right:0;padding-right:0}
+.quote-benefit__icon{flex:0 0 44px;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:#ffcc00;color:#101419}
+.quote-benefit__icon svg{width:25px;height:25px}
+.quote-benefit strong{display:block;margin-bottom:3px;font-size:.77rem;line-height:1.2}
+.quote-benefit p{margin:0;color:#6b7280;font-size:.73rem;line-height:1.32}
+.quote-item{position:relative;display:block;margin-bottom:14px;padding:19px;border:1px solid #d6dbe0;border-radius:10px;background:#fff;box-shadow:0 4px 16px #1111;transition:transform .23s,border-color .23s,box-shadow .23s}
+.quote-item:hover{transform:translateY(-2px);border-color:#e0bd49;box-shadow:0 9px 24px #1112}
+.quote-item__head{display:grid;grid-template-columns:112px minmax(0,1fr) auto;align-items:start;gap:17px}
+.quote-item-image{width:112px;height:112px;display:grid;place-items:center;overflow:hidden;border:1px solid #e1e5e9;border-radius:6px;background:#f5f6f7;color:#7c858e;font-size:2rem}
+.quote-item-image img{width:100%;height:100%;object-fit:contain}
+.quote-item__meta{display:flex;flex-wrap:wrap;gap:7px 14px;color:#6b7280;font-size:.72rem;font-weight:800;letter-spacing:.03em;text-transform:uppercase}
+.quote-item__meta .quote-item__sku{color:#a67d00}
+.quote-item h2{margin:8px 0 0;font-size:1.22rem;line-height:1.2}
+.quote-remove{display:inline-flex;align-items:center;gap:6px;padding:6px;border:0;border-radius:5px;background:transparent;color:#616b74;font-size:.73rem;font-weight:800}
+.quote-remove{text-decoration:none}
+.quote-remove:hover{background:#fff2e8;color:#a53910}
+.quote-remove svg{width:17px;height:17px}
+.quote-fields{display:grid;grid-template-columns:170px minmax(0,1fr) minmax(0,1fr);gap:13px;margin-top:17px;padding-top:17px;border-top:1px solid #e4e7ea}
+.quote-fields label{display:block;min-width:0;font-size:.73rem;font-weight:800;color:#242b32}
+.quote-fields input,.quote-fields textarea{width:100%;height:42px;margin-top:7px;padding:9px 10px;border:1px solid #cbd2d9;border-radius:5px;background:#fff;color:#11181d;font-size:.82rem;font-weight:400}
+.quote-fields textarea{height:42px;min-height:42px;resize:vertical}
+.quote-fields input::placeholder,.quote-fields textarea::placeholder{color:#87919b}
+.quote-qty{display:grid;grid-template-columns:38px minmax(0,1fr) 38px;height:42px;margin-top:7px}
+.quote-qty button{display:grid;place-items:center;border:1px solid #cbd2d9;background:#f6f7f8;color:#11181d;font-size:1.23rem;font-weight:800}
+.quote-qty button:first-child{border-radius:5px 0 0 5px}
+.quote-qty button:last-child{border-radius:0 5px 5px 0}
+.quote-qty button:hover:not(:disabled){background:#ffcc00}
+.quote-qty button:disabled{color:#aeb5bc;cursor:not-allowed}
+.quote-qty input{height:42px;margin:0;border-radius:0;border-inline:0;text-align:center;font-weight:800;appearance:textfield;-moz-appearance:textfield}
+.quote-qty input::-webkit-inner-spin-button,.quote-qty input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.quote-clear-dialog{width:min(430px,calc(100% - 32px));max-width:none;padding:27px;border:1px solid #e0e3e6;border-radius:11px;background:#fff;color:#11181d;box-shadow:0 25px 80px #0006}
+.quote-clear-dialog::backdrop{background:#06090bc9}
+.quote-clear-dialog__icon{width:50px;height:50px;display:grid;place-items:center;margin-bottom:17px;border-radius:50%;background:#fff4cd;color:#222}
+.quote-clear-dialog__icon svg{width:24px;height:24px}
+.quote-clear-dialog h2{margin:0 0 10px;font-size:1.38rem;line-height:1.2}
+.quote-clear-dialog p{margin:0;color:#59636d;font-size:.9rem;line-height:1.52}
+.quote-clear-dialog__actions{display:flex;justify-content:flex-end;gap:9px;margin-top:25px}
+.quote-clear-dialog__actions button{min-height:43px;padding:8px 13px;border:1px solid #aeb5bc;border-radius:5px;background:#fff;color:#15191f;font-size:.77rem;font-weight:800}
+.quote-clear-dialog__actions button:last-child{border-color:#ffcc00;background:#ffcc00}
+.quote-clear-dialog__actions button:hover{filter:brightness(.96)}
+@media(max-width:1100px){
+  .quote-main .quote-layout{grid-template-columns:minmax(0,1fr) minmax(285px,33%);gap:18px}
+  .quote-benefits{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}
+  .quote-benefit:nth-child(2){border-right:0}
+  .quote-fields{grid-template-columns:170px minmax(0,1fr)}
+  .quote-fields label:last-child{grid-column:1/-1}
+}
+@media(max-width:900px){
+  .quote-hero,.quote-hero__inner{min-height:265px}
+  .quote-main .quote-layout{grid-template-columns:1fr}
+  .quote-summary{position:static}
+  .quote-benefits{margin-bottom:6px}
+}
+@media(max-width:640px){
+  .quote-hero,.quote-hero__inner{min-height:0}
+  .quote-hero__inner{padding-top:15px;padding-bottom:32px}
+  .quote-hero__image{object-position:72% center}
+  .quote-hero__shade{background:linear-gradient(90deg,#0b0e12f7 0%,#0b0e12e6 60%,#0b0e1278 100%)}
+  .quote-hero__diagonal{left:82%;width:24%;border-left-width:8px;border-right-width:4px;opacity:.5}
+  .quote-hero__copy{margin-top:35px}
+  .quote-hero h1{max-width:440px;font-size:clamp(2.3rem,9.6vw,3.7rem)}
+  .quote-hero p{max-width:410px;font-size:.9rem}
+  .quote-main .container{width:calc(100% - 32px)}
+  .quote-main .quote-layout{gap:22px;padding-top:22px;padding-bottom:44px}
+  .quote-empty{min-height:292px;padding:20px 14px}
+  .quote-empty__icon{width:88px;height:88px}
+  .quote-empty__icon svg{width:54px;height:54px}
+  .quote-empty h2{font-size:1.48rem}
+  .quote-empty p{font-size:.87rem}
+  .quote-empty .btn{width:min(100%,270px);min-width:0}
+  .quote-summary{padding:22px 90px 22px 22px}
+  .quote-summary__actions{padding-right:0}
+  .quote-summary .btn{font-size:.72rem}
+  .quote-continue{margin-right:0}
+  .quote-item{padding:14px}
+  .quote-item__head{grid-template-columns:76px minmax(0,1fr);gap:12px}
+  .quote-item-image{width:76px;height:76px}
+  .quote-item h2{font-size:1.04rem;padding-right:0}
+  .quote-remove{grid-column:2;justify-self:start;margin-top:-4px}
+  .quote-fields{grid-template-columns:1fr;gap:12px;padding-right:72px}
+  .quote-fields label:last-child{grid-column:auto}
+  .quote-fields textarea{height:70px;min-height:70px}
+  .quote-qty{grid-template-columns:32px minmax(0,1fr) 32px}
+  .quote-benefits{gap:15px 0}
+  .quote-benefit{padding-inline:8px}
+  .quote-benefit__icon{flex-basis:38px;width:38px;height:38px}
+  .quote-benefit__icon svg{width:21px;height:21px}
+}
+@media(max-width:430px){
+  .quote-hero h1{font-size:clamp(2.13rem,10vw,2.7rem)}
+  .quote-benefits{grid-template-columns:1fr}
+  .quote-benefit,.quote-benefit:first-child,.quote-benefit:last-child{padding:4px 0;border-right:0}
+  .quote-summary__actions{padding-right:0}
+  .quote-summary .btn{min-height:60px}
+  .quote-summary .btn>span:last-child{display:none}
+  .quote-clear-dialog__actions{flex-direction:column}
+  .quote-clear-dialog__actions button{width:100%}
+}
+@media(max-width:370px){
+  .quote-fields{grid-template-columns:1fr}
+  .quote-fields label:last-child{grid-column:auto}
+  .quote-summary{padding:18px 82px 18px 18px}
+}
+@media(prefers-reduced-motion:reduce){
+  .quote-item,.quote-clear{transition:none}
+  .quote-item:hover{transform:none}
+}

@@ -1,0 +1,14 @@
+FROM node:24-alpine
+
+ENV NODE_ENV=production PORT=80
+WORKDIR /app
+
+# Copy only runtime files. In particular, never include the local .env or source material.
+COPY --chown=node:node package.json package-lock.json ./
+COPY --chown=node:node server.mjs ./
+COPY --chown=node:node lib ./lib
+COPY --chown=node:node data ./data
+COPY --chown=node:node public ./public
+
+EXPOSE 80
+CMD ["node", "--use-system-ca", "server.mjs"]

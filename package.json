@@ -1,0 +1,14 @@
+{
+  "name": "mg-borrachas-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --use-system-ca server.mjs",
+    "start": "node --use-system-ca server.mjs",
+    "import:catalog": "node --use-system-ca scripts/import-catalog.mjs",
+    "test": "node --test",
+    "verify:public": "node scripts/verify-public.mjs"
+  },
+  "engines": { "node": "24.x" }
+}

@@ -1,0 +1,29 @@
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.site-header{background:#080a0df5;border-bottom:1px solid #34383c}
+.header-inner{min-height:98px;gap:25px}
+.header-inner .brand{width:160px;flex:none}
+.desktop-nav{gap:clamp(14px,1.45vw,28px)}
+.desktop-nav a{font-size:.7rem;padding-block:40px}
+.desktop-nav a::after{bottom:24px}
+.header-actions{gap:18px}
+.header-search-form{width:225px;height:44px;display:flex;align-items:center;border:1px solid #555b63;border-radius:8px;background:#1b1e22;overflow:hidden}
+.header-search-form input{width:100%;min-width:0;height:100%;border:0;outline:0;padding:0 12px;color:#fff;background:transparent;font-size:.76rem}
+.header-search-form input::placeholder{color:#9ca2aa}
+.header-search-form button{height:100%;width:42px;flex:none;border:0;color:#fff;background:transparent;font-size:1.7rem;line-height:1}
+.header-search-mobile{display:none}
+.quote-link{display:flex;align-items:center;gap:9px;width:auto;height:auto;border:0;background:none;font-size:.73rem;font-weight:800;line-height:1.05}
+.quote-link .cart-icon{display:grid;place-items:center;width:43px;height:43px;border:1px solid #68707a;border-radius:7px;font-size:1.45rem}
+.quote-count{top:-6px;left:31px;right:auto}
+.quote-label{min-width:61px}
+.header-cta{min-height:58px;min-width:180px;gap:13px;font-size:.79rem;line-height:1.15}
+.header-cta .wa-icon{display:grid;place-items:center;border:2px solid currentColor;border-radius:50%;width:27px;height:27px;font-size:1.15rem;line-height:1}
+.wa-glyph{display:block;width:21px;height:21px;flex:none;background:currentColor;-webkit-mask:url('/assets/icons/whatsapp.svg') center/contain no-repeat;mask:url('/assets/icons/whatsapp.svg') center/contain no-repeat}
+.header-cta .wa-glyph{width:16px;height:16px}
+.header-search-mobile{width:42px;height:42px;border:1px solid #555b63;border-radius:6px;place-items:center;font-size:1.6rem}
+.editorial-image{display:grid;place-items:center;padding:28px;background:#080a0d}
+.editorial-image img{height:auto;max-height:520px;object-fit:contain}
+@media(max-width:1350px){.header-inner{gap:18px}.header-search-form{width:180px}.header-actions{gap:10px}.header-cta{min-width:160px}.desktop-nav{gap:13px}}
+@media(max-width:1120px){.header-search-form{display:none}.header-search-mobile{display:grid}}
+@media(max-width:960px){.desktop-nav{display:none}.header-inner{justify-content:space-between}.header-actions{margin-left:auto}.menu-toggle{display:grid}.header-cta{min-width:160px}}
+@media(max-width:640px){.header-inner{min-height:72px}.header-inner .brand{width:136px}.header-cta,.quote-label{display:none}.header-actions{gap:8px}.quote-link .cart-icon,.menu-toggle,.header-search-mobile{width:39px;height:39px}.quote-count{left:27px}.mobile-menu{top:72px;max-height:calc(100dvh - 72px)}}
+@media(max-width:370px){.header-inner .brand{width:118px}.header-actions{gap:5px}.quote-link .cart-icon,.menu-toggle,.header-search-mobile{width:36px;height:36px}}
