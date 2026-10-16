@@ -1,10 +1,10 @@
 /* Cache exclusively public, anonymous pages and same-origin site assets. */
-const VERSION = 'mg-borrachas-v14';
+const VERSION = 'mg-borrachas-v15';
 const PAGE_CACHE = `${VERSION}-pages`;
 const ASSET_CACHE = `${VERSION}-assets`;
 const PUBLIC_PAGES = /^\/(?:$|produtos(?:\/[a-z0-9-]+)?|categorias(?:\/[a-z0-9-]+)?|orcamento|sob-medida|sobre|contato|privacidade|offline)\/?$/;
-const PUBLIC_ASSETS = /^\/(?:site|header|reference-home|polish|catalog|pwa|custom-page|about-page|contact-page|quote-page|floating-whatsapp)\.(?:css|js)$|^\/manifest\.webmanifest$|^\/assets\/(?:brand|products|pwa|icons)\/[a-zA-Z0-9_.-]+\.(?:png|jpg|jpeg|webp|svg)$/;
-const SHELL = ['/offline', '/site.css', '/header.css', '/reference-home.css', '/polish.css', '/catalog.css', '/custom-page.css', '/about-page.css', '/contact-page.css', '/quote-page.css', '/floating-whatsapp.css', '/site.js', '/custom-page.js', '/about-page.js', '/pwa.js', '/manifest.webmanifest', '/assets/brand/marca-mg-oficial-transparente.png', '/assets/brand/hero-sob-medida-v2.webp', '/assets/brand/hero-contato.webp', '/assets/icons/whatsapp.svg', '/assets/icons/instagram.svg', '/assets/pwa/icon-192.png', '/assets/pwa/icon-512.png'];
+const PUBLIC_ASSETS = /^\/(?:site|header|reference-home|polish|catalog|pwa|custom-page|about-page|contact-page|quote-page|floating-whatsapp|typography)\.(?:css|js)$|^\/manifest\.webmanifest$|^\/assets\/(?:brand|products|pwa|icons)\/[a-zA-Z0-9_.-]+\.(?:png|jpg|jpeg|webp|svg)$/;
+const SHELL = ['/offline', '/site.css', '/header.css', '/reference-home.css', '/polish.css', '/catalog.css', '/custom-page.css', '/about-page.css', '/contact-page.css', '/quote-page.css', '/floating-whatsapp.css', '/typography.css', '/site.js', '/custom-page.js', '/about-page.js', '/pwa.js', '/manifest.webmanifest', '/assets/brand/marca-mg-oficial-transparente.png', '/assets/brand/hero-sob-medida-v2.webp', '/assets/brand/hero-contato.webp', '/assets/icons/whatsapp.svg', '/assets/icons/instagram.svg', '/assets/pwa/icon-192.png', '/assets/pwa/icon-512.png'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(ASSET_CACHE).then(cache => cache.addAll(SHELL)));
