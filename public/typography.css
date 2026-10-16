@@ -59,6 +59,8 @@ body.readable-site .about-hero .about-eyebrow { color: #ffc400; }
   body.readable-site .reference-hero h1 { font-size: clamp(2.25rem, 9.5vw, 3.55rem); }
   body.readable-site .reference-hero h1 :is(.hero-pre, .hero-word, .hero-tail, .hero-end) { white-space: normal; }
   body.readable-site .about-story h2 { font-size: clamp(1.9rem, 7vw, 2.5rem); }
+  body.readable-site .product-detail { grid-template-columns: minmax(0, 1fr); }
+  body.readable-site .detail-content h1 { font-size: clamp(2rem, 7vw, 2.5rem); }
   body.readable-site .reference-hero .tag { font-size: .7rem; }
   body.readable-site .benefit span { font-size: .68rem; }
 }

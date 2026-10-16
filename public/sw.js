@@ -1,5 +1,5 @@
 /* Cache exclusively public, anonymous pages and same-origin site assets. */
-const VERSION = 'mg-borrachas-v17';
+const VERSION = 'mg-borrachas-v18';
 const PAGE_CACHE = `${VERSION}-pages`;
 const ASSET_CACHE = `${VERSION}-assets`;
 const PUBLIC_PAGES = /^\/(?:$|produtos(?:\/[a-z0-9-]+)?|categorias(?:\/[a-z0-9-]+)?|orcamento|sob-medida|sobre|contato|privacidade|offline)\/?$/;
