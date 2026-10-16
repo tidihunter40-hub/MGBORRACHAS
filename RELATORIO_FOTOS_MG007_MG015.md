@@ -32,4 +32,4 @@ O ZIP foi extraído em `MG_BORRACHAS_FOTOS_CODEX/` sem sobrescrever arquivos do 
 2. Padronizar os nove arquivos em WebP 1200 × 900, conferir visualmente o corte e enviar pelo painel, marcando a foto principal.
 3. Verificar os nove cards e detalhes em desktop, tablet e celular, além dos filtros e links de orçamento, com as imagens reais carregadas.
 
-As fotos MG001 a MG006, logo, descrições, categorias, preços, status e dados do Supabase não foram modificados. Nenhum deploy foi realizado.
+As fotos MG001 a MG006, logo, descrições, categorias, preços, status e dados do Supabase não foram modificados. Após esta verificação, o proprietário solicitou a publicação do site no projeto Vercel vinculado. O deploy de produção ficou disponível em `https://mg-borrachas.vercel.app`; a verificação pública retornou 15 produtos, 10 categorias, 6 fotos e 9 marcadores de foto pendente. Nenhuma fotografia de referência de terceiros foi publicada.
